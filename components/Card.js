@@ -42,7 +42,7 @@ const ScreenReaderOnly = styled.span`
   border-width: 0;
 `;
 
-export default function Card({ name, image, location, id }) {
+export default function Card({ name, image, location, _id }) {
   return (
     <Article>
       <Figure>
@@ -59,7 +59,7 @@ export default function Card({ name, image, location, id }) {
         <figcaption>{name}</figcaption>
       </Figure>
       <p>Location: {location}</p>
-      <Link href={`places/${id}`} passHref legacyBehavior>
+      <Link href={`places/${_id}`} passHref legacyBehavior>
         <Anchor>
           <ScreenReaderOnly>More Info</ScreenReaderOnly>
         </Anchor>
